@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 11.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-04-14T10:33:01" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '76a2c31d-61e8-445e-a88c-77c86fbb1000' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::System' -  (Package)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::System::Collections' -  (Package)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::System::Collections::Generic::List&lt;BulletEngine‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::System::Collections::Generic::List&lt;TankFragment‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks' -  (Package)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine' -  (Package)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::BulletEngine' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::MapBase' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::MoveDirection' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Medium" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine' -  (Class)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::Bullets' -  (Property)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::DirectionIsBlocked' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::DirectionIsBlocked::direction' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::DirectionIsBlocked::map' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::DirectionIsBlocked::tank' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::MakeShoot' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::MakeShoot::direction' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::MakeShoot::x' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::MakeShoot::y' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::MyTank' -  (Property)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::Shoot' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::Shoot::direction' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::Shoot::x' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::Shoot::y' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::ShootEnable' -  (Property)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankCreate' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankCreate::direction' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankCreate::x' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankCreate::y' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankDraw' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankDraw::direction' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankDraw::tank' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankEngine' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankErase' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankErase::tank' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankInit' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankInit::direction' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankInit::tank' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankInit::x' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankInit::y' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMove' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMove::direction' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMove::lastDirection' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMove::map' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMove::tank' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMoveDown' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMoveDown::tank' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMoveLeft' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMoveLeft::tank' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMoveRight' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMoveRight::tank' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMoveUp' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankMoveUp::tank' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankTurn' -  (Operation)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankTurn::direction' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankTurn::lastDirection' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankEngine::TankTurn::tank' -  (Parameter)" />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Tanks.Models::Tanks::GameEngine::TankFragment' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="High" Text="(7) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-04-14T10:33:14" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>
