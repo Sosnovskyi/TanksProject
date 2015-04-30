@@ -41,6 +41,7 @@ namespace Tanks.GameEngine
         public event GameEngineDelegate<List<TankFragment>> TankDraw;
         public event GameEngineDelegate<List<TankFragment>> TankErase;
 
+        //private
         public void OnTankDraw(List<TankFragment> list)
         {
             if (TankDraw != null)
@@ -49,6 +50,7 @@ namespace Tanks.GameEngine
             }
         }
 
+        //private
         public void OnTankErase(List<TankFragment> list)
         {
             if (TankErase != null)
@@ -187,6 +189,7 @@ namespace Tanks.GameEngine
             OnTankDraw(tank);
         }
 
+        //private
         public void TankCreateOnMap(List<TankFragment> tank, MapBase map)
         {
             foreach (var t in tank)
@@ -195,6 +198,7 @@ namespace Tanks.GameEngine
             }
         }
 
+        //private
         public void TankDeleteFromMap(List<TankFragment> tank, MapBase map)
         {
             foreach (var t in tank)
@@ -338,6 +342,7 @@ namespace Tanks.GameEngine
             }
         }
 
+        //private
         public void MakeShoot(int x, int y, MoveDirection direction)
         {
             var lBulletEngine = new BulletEngine(x, y, direction);

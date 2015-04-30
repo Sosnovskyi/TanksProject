@@ -8,13 +8,14 @@ namespace Tanks.GameEngine
 
         public delegate void MapInitDelegate(out int[,] map, int[,] array, int sizeX, int sizeY);
 
-        public List<int> Borders = new List<int>();
-        public Map<List<int>> DrawBorders;
-        public Map<int[,]> DrawMap;
-        public int[,] GameMap;
-        public MapInitDelegate InitMap;
-        public event GameEngineDelegate<int[]> MapPointErase;
+        public List<int> Borders = new List<int>();                     // Property vs Field?
+        public Map<List<int>> DrawBorders;                              // Property vs Field?
+        public Map<int[,]> DrawMap;                                     // Property vs Field?
+        public int[,] GameMap;                                          // Property vs Field?
+        public MapInitDelegate InitMap;                                 // Property vs Field?
+        public event GameEngineDelegate<int[]> MapPointErase;           // Property vs Field?
 
+        //private
         public void OnMapPointErase(int[] point)
         {
             if (MapPointErase != null)
