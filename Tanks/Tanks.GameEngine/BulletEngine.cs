@@ -18,6 +18,10 @@ namespace Tanks.GameEngine
         public int X { get; set; }
         public int Y { get; set; }
         public MoveDirection Direction { get; set; }
+        /*			
+			Review VV:
+			    для типів подій слід використовувати EventHandler<>
+		*/
         public event GameEngineDelegate<BulletEngine> BulletDraw;
         public event GameEngineDelegate<BulletEngine> BulletErase;
 

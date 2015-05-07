@@ -4,6 +4,10 @@ namespace Tanks.GameEngine
 {
     public class EnemyTankEngine : TankEngine
     {
+        /*			
+            Review VV:
+                для типів подій слід використовувати EventHandler<>
+        */
         public event GameEngineDelegate<List<TankFragment>> EnemyTankDraw;
         public event GameEngineDelegate<List<TankFragment>> EnemyTankErase;
 

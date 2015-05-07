@@ -33,8 +33,12 @@ namespace Tanks.GameEngine
 
     public class GameEngineControl
     {
-        public static List<TankFragment> MyTank = new List<TankFragment>();
-        public static List<TankFragment> EnemyTank = new List<TankFragment>();
+        /*			
+			Review VV:
+			    ці поля повинні бути нестатичними і приватними
+		*/
+        public List<TankFragment> MyTank = new List<TankFragment>();
+        public List<TankFragment> EnemyTank = new List<TankFragment>();
         private ControlActions _action;
         private MoveDirection _direction;
         private ControlActions _enemyAction;

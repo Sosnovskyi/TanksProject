@@ -8,11 +8,19 @@ namespace Tanks.GameEngine
 
         public delegate void MapInitDelegate(out int[,] map, int[,] array, int sizeX, int sizeY);
 
+        /*			
+			Review VV:
+			    поля повинні бути приватними
+		*/
         public List<int> Borders = new List<int>();
         public Map<List<int>> DrawBorders;
         public Map<int[,]> DrawMap;
         public int[,] GameMap;
         public MapInitDelegate InitMap;
+        /*			
+			Review VV:
+			    для типів подій слід використовувати EventHandler<>
+		*/
         public event GameEngineDelegate<int[]> MapPointErase;
 
         public void OnMapPointErase(int[] point)
