@@ -15,9 +15,9 @@ namespace Tanks.GameEngine
             Direction = direction;
         }
 
-        public int X { get; set; }
-        public int Y { get; set; }
-        public MoveDirection Direction { get; set; }
+        public int X { get; set; }                             // private set
+        public int Y { get; set; }                               // private set
+        public MoveDirection Direction { get; set; }                 //private set
         public event GameEngineDelegate<BulletEngine> BulletDraw;
         public event GameEngineDelegate<BulletEngine> BulletErase;
 
@@ -29,6 +29,7 @@ namespace Tanks.GameEngine
             }
         }
 
+        // Цей метод варто вказати з модифікатором private
         public void OnBulletDraw(BulletEngine bullet)
         {
             if (BulletDraw != null)
@@ -113,6 +114,7 @@ namespace Tanks.GameEngine
             }
         }
 
+        // Цей метод варто вказати з модифікатором private
         public void BulletCreateOnMap(BulletEngine bulletEngine, MapBase map)
         {
             map.GameMap[bulletEngine.Y, bulletEngine.X] = 4;
@@ -123,6 +125,7 @@ namespace Tanks.GameEngine
             map.GameMap[bulletEngine.Y, bulletEngine.X] = 0;
         }
 
+        // Всі наступні методи варто вказати з модифікатором private
         public bool BulletNearWall(BulletEngine bulletEngine, int[,] mapPoints)
         {
             var bulletNearWall = false;
