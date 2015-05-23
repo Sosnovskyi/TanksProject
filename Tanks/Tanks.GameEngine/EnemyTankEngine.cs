@@ -7,6 +7,7 @@ namespace Tanks.GameEngine
         public event GameEngineDelegate<List<TankFragment>> EnemyTankDraw;
         public event GameEngineDelegate<List<TankFragment>> EnemyTankErase;
 
+        //private
         public void OnEnemyTankDraw(List<TankFragment> tank)
         {
             if (EnemyTankDraw != null)
@@ -15,6 +16,7 @@ namespace Tanks.GameEngine
             }
         }
 
+        //private
         public void OnEnemyTankErase(List<TankFragment> tank)
         {
             if (EnemyTankErase != null)
@@ -33,6 +35,7 @@ namespace Tanks.GameEngine
             OnEnemyTankDraw(tank);
         }
 
+        //private
         public void EnemyTankChoseActions(out ControlActions enemyTankNextAction, List<TankFragment> enemyTank,
             List<TankFragment> tank, ControlActions enemyTankAction)
         {
@@ -214,6 +217,7 @@ namespace Tanks.GameEngine
             EnemyTankCreateOnMap(tank, map);
         }
 
+        //private
         public void EnemyTankCreateOnMap(List<TankFragment> tank, MapBase map)
         {
             foreach (var t in tank)
@@ -222,6 +226,7 @@ namespace Tanks.GameEngine
             }
         }
 
+        //private
         public void EnemyTankDeleteFromMap(List<TankFragment> tank, MapBase map)
         {
             foreach (var t in tank)
@@ -250,7 +255,7 @@ namespace Tanks.GameEngine
             {
                 case ControlActions.MoveUp:
                     nextEnemyDirection = MoveDirection.Up;
-                    break;
+                    break;                                                                  //дивитись коментар до GameEngineControl
                 case ControlActions.MoveDown:
                     nextEnemyDirection = MoveDirection.Down;
                     break;

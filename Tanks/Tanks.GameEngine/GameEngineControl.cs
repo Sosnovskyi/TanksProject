@@ -75,40 +75,68 @@ namespace Tanks.GameEngine
             _tanksTimer = new Timer(10000);
             _tanksTimer.Elapsed += TanksTimerOnElapsed;
             _tanksTimer.Interval = _tanksSpeed;
-            switch (direction)
+
+
+            //тут двічі, і ще в методі Control класу EnemyTankEngine, де ми отримуємо ControlAction є код, який повторюється           
+            // public static ControlAction GetControlAction(MoveDirection direction)
+            //     switch    (direction) 
+            //         {                  
+            //               case MoveDirection.Up:                                                        
+            //                 return ControlActions.MoveUp;
+            //                 break;
+            //            case MoveDirection.Down:                
+            //                 return = ControlActions.MoveDown;  
+            //                 break;                              
+            //            case MoveDirection.Right:
+            //                 return = ControlActions.MoveRight;
+            //                 break;
+            //            case MoveDirection.Left:
+            //                 return = ControlActions.MoveLeft;
+            //                 break;
+            //        }                                                                  
+            //        return ControlActions.MoveUp;
+            //_action = GetControlAction(direction)
+
+
+
+
+            //_enemyAction = GetControlAction(enemyDirection)
+
+
+            switch (direction)                                                              
             {
-                case MoveDirection.Up:
-                    _action = ControlActions.MoveUp;
-                    break;
-                case MoveDirection.Down:
-                    _action = ControlActions.MoveDown;
-                    break;
-                case MoveDirection.Right:
-                    _action = ControlActions.MoveRight;
-                    break;
-                case MoveDirection.Left:
-                    _action = ControlActions.MoveLeft;
-                    break;
-            }
-            switch (enemyDirection)
-            {
-                case MoveDirection.Up:
-                    _enemyAction = ControlActions.MoveUp;
-                    break;
-                case MoveDirection.Down:
+                case MoveDirection.Up:                                                                                   
+                    _action = ControlActions.MoveUp;                                        
+                    break;                                                                  
+                case MoveDirection.Down:                                                    
+                    _action = ControlActions.MoveDown;                                      
+                    break;                                                                  
+                case MoveDirection.Right:                                                   
+                    _action = ControlActions.MoveRight;                                     
+                    break;                                                                  
+                case MoveDirection.Left:                                                    
+                    _action = ControlActions.MoveLeft;                                      
+                    break;                                                                  
+            }                                                                               
+            switch (enemyDirection)                                                         
+            {                                                                               
+                case MoveDirection.Up:                                                      
+                    _enemyAction = ControlActions.MoveUp;                                   
+                    break;                                                                  
+                case MoveDirection.Down:                                                    
                     _enemyAction = ControlActions.MoveDown;
                     break;
                 case MoveDirection.Right:
                     _enemyAction = ControlActions.MoveRight;
-                    break;
+                    break;                                                                  
                 case MoveDirection.Left:
                     _enemyAction = ControlActions.MoveLeft;
                     break;
             }
         }
 
-        public bool GameOver { get; set; }
-        public bool PlayerWin { get; set; }
+        public bool GameOver { get; set; }                                                  // { get; private set; }
+        public bool PlayerWin { get; set; }                                                 // { get; private set; }
 
         private void TanksTimerOnElapsed(object sender, ElapsedEventArgs elapsedEventArgs)
         {
@@ -148,6 +176,7 @@ namespace Tanks.GameEngine
             OnGameIsOver(GameOverMessage);
         }
 
+        //private
         public void GameControl()
         {
             while (!GameOver)
@@ -178,6 +207,7 @@ namespace Tanks.GameEngine
             }
         }
 
+        //private
         public void GameProcess()
         {
             while (!GameOver)
@@ -192,6 +222,7 @@ namespace Tanks.GameEngine
             }
         }
 
+        //private
         public void BulletsTimerOnElapsed(object sender, ElapsedEventArgs elapsedEventArgs)
         {
             BulletsCollisionHandler(_tank.Bullets, out _enemyTank.Bullets, _map, false);
@@ -202,41 +233,57 @@ namespace Tanks.GameEngine
             _bullet.BulletsMove(_enemyTank.Bullets, _map);
             _bulletsTimer.Enabled = !GameOver;
         }
-         
+     
+        //private
         public void BulletsCollisionHandler(List<BulletEngine> bullets, out List<BulletEngine> enemyBullets,
             MapBase map, bool enemy)
         {
             var lEnemyBullets = enemy ? _tank.Bullets : _enemyTank.Bullets;
             for (var i = 0; i < bullets.Count; i++)
             {
+
+                //В даному методі чотрири рази написаний код
+                //if (bullet != null)                            
+                //{                                              
+                //    _bullet.OnBulletErase(bullet);             
+                //    _bullet.BulletDeleteFromMap(bullet, map);          
+                //    lEnemyBullets.Remove(bullet);              
+                //}                                              
+                //_bullet.OnBulletErase(bullets[i]);             
+                //_bullet.BulletDeleteFromMap(bullets[i], map);  
+                //bullets.Remove(bullets[i]);                    
+                //
+                //Можливо, варто було з цього коду зробити приватний метод
+                
+
                 switch (bullets[i].Direction)
                 {
                     case MoveDirection.Up:
                         if (map.GameMap[bullets[i].Y - 1, bullets[i].X] == 4)
-                        {
-                            var bullet = lEnemyBullets.SingleOrDefault(bull => bull.X == bullets[i].X &
-                                                                              bull.Y == bullets[i].Y - 1);
+                        {                                                                                                   
+                            var bullet = lEnemyBullets.SingleOrDefault(bull => bull.X == bullets[i].X &                     
+                                                                              bull.Y == bullets[i].Y - 1);                  
+                            if (bullet != null)                                                                             
+                            {                                                                                               
+                                _bullet.OnBulletErase(bullet);                                                              
+                                _bullet.BulletDeleteFromMap(bullet, map);                                                   
+                                lEnemyBullets.Remove(bullet);                                                               
+                            }                                                                                               
+                            _bullet.OnBulletErase(bullets[i]);                                                              
+                            _bullet.BulletDeleteFromMap(bullets[i], map);                                                   
+                            bullets.Remove(bullets[i]);                                                                     
+                        }                                                                                                   
+                        break;                                                                                              
+                    case MoveDirection.Down:                                                                                
+                        if (map.GameMap[bullets[i].Y + 1, bullets[i].X] == 4)                                               
+                        {                                                                                                       
+                            var bullet = lEnemyBullets.SingleOrDefault(bull => bull.X == bullets[i].X &                     
+                                                                              bull.Y == bullets[i].Y + 1);                  
                             if (bullet != null)
                             {
                                 _bullet.OnBulletErase(bullet);
                                 _bullet.BulletDeleteFromMap(bullet, map);
-                                lEnemyBullets.Remove(bullet);
-                            }
-                            _bullet.OnBulletErase(bullets[i]);
-                            _bullet.BulletDeleteFromMap(bullets[i], map);
-                            bullets.Remove(bullets[i]);
-                        }
-                        break;
-                    case MoveDirection.Down:
-                        if (map.GameMap[bullets[i].Y + 1, bullets[i].X] == 4)
-                        {
-                            var bullet = lEnemyBullets.SingleOrDefault(bull => bull.X == bullets[i].X &
-                                                                              bull.Y == bullets[i].Y + 1);
-                            if (bullet != null)
-                            {
-                                _bullet.OnBulletErase(bullet);
-                                _bullet.BulletDeleteFromMap(bullet, map);
-                                lEnemyBullets.Remove(bullet);
+                                lEnemyBullets.Remove(bullet);                                                               
                             }
                             _bullet.OnBulletErase(bullets[i]);
                             _bullet.BulletDeleteFromMap(bullets[i], map);
@@ -280,33 +327,52 @@ namespace Tanks.GameEngine
             enemyBullets = lEnemyBullets;
         }
 
+
+        //private
         public void BulletAndTankColisionHandler(List<BulletEngine> bullets, bool enemy, MapBase map)
         {
             var tankId = enemy ? 3 : 2;
             foreach (var bul in bullets)
             {
-                switch (bul.Direction)
+
+                //4 рази дублювання коду. Можна оголосити 
+                //  private void LoseOrWin(bool enemy)
+                //  {
+                //      GameOver = true;     
+                //      if (enemy)           
+                //      {                    
+                //          PlayerWin = true;
+                //      }                    
+                //  
+                //      І коли перевіряти   
+                //  if (map.GameMap[bul.Y - 1, bul.X] == tankId
+                //     {            
+                //          LoseOrWin(enemy)       
+                //      }       
+                
+                
+                switch (bul.Direction)                          
                 {
                     case MoveDirection.Up:
-                        if (map.GameMap[bul.Y - 1, bul.X] == tankId)
-                        {
-                            GameOver = true;
-                            if (enemy)
-                            {
-                                PlayerWin = true;
-                            }
-                        }
-                        break;
-                    case MoveDirection.Down:
-                        if (map.GameMap[bul.Y + 1, bul.X] == tankId)
-                        {
-                            GameOver = true;
-                            if (enemy)
-                            {
-                                PlayerWin = true;
-                            }
-                        }
-                        break;
+                        if (map.GameMap[bul.Y - 1, bul.X] == tankId)                                                        
+                        {                                                                                                   
+                            GameOver = true;                                                                                
+                            if (enemy)                                                                                      
+                            {                                                                                               
+                                PlayerWin = true;                                                                           
+                            }                                                                                               
+                        }                                                                                                   
+                        break;                                                                                              
+                    case MoveDirection.Down:                                                                                
+                        if (map.GameMap[bul.Y + 1, bul.X] == tankId)  
+                        {                                                                                                   
+                            GameOver = true;                                                                                
+                            if (enemy)                                                                                      
+                            {                                                                                               
+                                PlayerWin = true;                                                                           
+                            }                                                                                               
+                        }                                                                                                   
+                        break;                                                                                              
                     case MoveDirection.Left:
                         if (map.GameMap[bul.Y, bul.X - 1] == tankId)
                         {
