@@ -5,6 +5,10 @@ namespace Tanks.GameEngine
     public class TankEngine
     {
         private int _shootCounter;
+        /*			
+			Review VV:
+			    поля повинні бути приватними
+		*/
         public List<BulletEngine> Bullets = new List<BulletEngine>();
 
         public TankEngine()
@@ -38,6 +42,10 @@ namespace Tanks.GameEngine
             }
         }
 
+        /*			
+			Review VV:
+			    для типів подій слід використовувати EventHandler<>
+		*/
         public event GameEngineDelegate<List<TankFragment>> TankDraw;
         public event GameEngineDelegate<List<TankFragment>> TankErase;
 
@@ -75,8 +83,12 @@ namespace Tanks.GameEngine
                 var fragment = new TankFragment(0, 0);
                 tank.Add(fragment);
             }
+            /*			
+			    Review VV:
+                    код з опереторів case краще винести в окремі приватні функції			
+		    */
             switch (direction)
-            {
+            {                
                 case MoveDirection.Up:
                     tank[0].X = x;
                     tank[0].Y = y;
@@ -349,6 +361,10 @@ namespace Tanks.GameEngine
             switch (direction)
             {
                 case MoveDirection.Left:
+                    /*			
+                        Review VV:
+                            код з опереторів case краще винести в окремі приватні функції			
+                    */
                     switch (lastDirection)
                     {
                         case MoveDirection.Up:

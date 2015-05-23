@@ -55,9 +55,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tanks.GameEngine">
-      <HintPath>..\Tanks.GameEngine\bin\Debug\Tanks.GameEngine.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventMethods.cs" />
@@ -89,6 +86,12 @@
     <Content Include="Resourses\WallsCoordinates.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tanks.GameEngine\Tanks.GameEngine.csproj">
+      <Project>{659a0c2f-4e3c-4b75-a1d2-4a573dbeae9c}</Project>
+      <Name>Tanks.GameEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
